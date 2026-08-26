@@ -1,0 +1,30 @@
+{
+  "name": "libreta",
+  "version": "0.1.0",
+  "description": "Persistent memory for coding agents: observations, sessions, daily log and token metrics over a local SQLite DB, exposed as an MCP server.",
+  "author": "Javier Cossio <genesis3589@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "libreta-server": "./dist/src/mcp/server.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx --test --test-concurrency=1 test/**/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "better-sqlite3": "^12.11.1",
+    "ulid": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
